@@ -1,6 +1,6 @@
 " Vim Plug
 " Specify a directory for plugins
-call plug#begin(stdpath('data') . '/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Themes
