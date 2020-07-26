@@ -9,7 +9,7 @@ set backspace=indent,eol,start  " backspace through everything in I mode
 
 " - Column, lines, etc
 set nowrap                      " do not wrap lines
-set textwidth=88                " text width
+set textwidth=79                " text width
 set formatoptions=qrn1
 
 

@@ -2,7 +2,7 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General User Interface
-set colorcolumn=89      " colored column at x chars
+set colorcolumn=80      " colored column at x chars
 set number      	    " show line numbers
 set cursorline      	" Highlight cursor line
 set cmdheight=1         "  space for displaying messages.

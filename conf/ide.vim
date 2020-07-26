@@ -21,6 +21,7 @@ nnoremap <A-3> :GundoToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CoC
+let g:coc_global_extensions = ['coc-python', 'coc-conjure', 'coc-git']
 
 " Create a shortcut for opening the COC config file
 function! SetupCommandAbbrs(from, to)

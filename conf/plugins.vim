@@ -19,6 +19,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joshdick/onedark.vim'
 " xcode theme
 Plug 'arzg/vim-colors-xcode'
+" monokai
+Plug 'crusoexia/vim-monokai'
 
 " Status line
 Plug 'vim-airline/vim-airline'
@@ -48,9 +50,10 @@ Plug 't9md/vim-choosewin'
 " Display an Undo Tree
 Plug 'sjl/gundo.vim'
 
-"
-" ## General IDE ##
-"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General IDE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Comment stuff out: gcc / gc[target]
 Plug 'tpope/vim-commentary'
@@ -73,9 +76,10 @@ Plug 'majutsushi/tagbar'
 " Syntax support for multiple languages
 Plug 'sheerun/vim-polyglot'
 
-"
-" ## PYTHON ##
-"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Python
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python syntax highlighting
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
@@ -90,9 +94,21 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'jeetsukumaran/vim-pythonsense'
 
 
-"
-" ## Config and Data Files ##
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Clojure
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Conjure
+Plug 'Olical/conjure', {'tag': 'v4.1.0'}
+" S expression editing made easy
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Config and Data files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " JSONC - i.e. json with comments
 Plug 'kevinoid/vim-jsonc'
 
