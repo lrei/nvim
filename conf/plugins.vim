@@ -7,6 +7,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gruvbox theme
 Plug 'morhetz/gruvbox'
+"PaperColor
+Plug 'NLKNguyen/papercolor-theme'
+
 " railscasts theme
 Plug 'carakan/new-railscasts-theme'
 " Solarized
@@ -17,10 +20,24 @@ Plug 'haishanh/night-owl.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 " OneDark
 Plug 'joshdick/onedark.vim'
+Plug 'KeitaNakamura/neodark.vim'
 " xcode theme
 Plug 'arzg/vim-colors-xcode'
 " monokai
 Plug 'crusoexia/vim-monokai'
+" ayu
+Plug 'ayu-theme/ayu-vim'
+" lucius
+Plug 'jonathanfilip/vim-lucius'
+" nightfly
+Plug 'bluz71/vim-nightfly-guicolors'
+" jellybeans
+Plug 'nanotech/jellybeans.vim'
+" badwolf
+Plug 'sjl/badwolf'
+" seoul256
+Plug 'junegunn/seoul256.vim'
+
 
 " Status line
 Plug 'vim-airline/vim-airline'
@@ -76,6 +93,12 @@ Plug 'majutsushi/tagbar'
 " Syntax support for multiple languages
 Plug 'sheerun/vim-polyglot'
 
+" Add indention (guide) lines
+Plug 'Yggdroot/indentLine'
+
+" Rainbow Parentheses
+Plug 'junegunn/rainbow_parentheses.vim'
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python
@@ -102,6 +125,10 @@ Plug 'Olical/conjure', {'tag': 'v4.1.0'}
 " S expression editing made easy
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
+" easy nrepl
+Plug 'tpope/vim-dispatch'
+Plug 'clojure-vim/vim-jack-in'
+Plug 'radenling/vim-dispatch-neovim'
 
 
 

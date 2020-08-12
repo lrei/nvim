@@ -10,6 +10,7 @@ set backspace=indent,eol,start  " backspace through everything in I mode
 " - Column, lines, etc
 set nowrap                      " do not wrap lines
 set textwidth=79                " text width
+set colorcolumn=80      " colored column at x chars
 set formatoptions=qrn1
 
 

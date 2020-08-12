@@ -9,10 +9,11 @@
 
   // python config
   "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["--line-length", "79"],
+  "python.formatting.blackArgs": ["--line-length", "80"],
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": ["--docstring-convention", "numpy"],
+  "python.linting.flake8Args": ["--docstring-convention", "numpy",
+      "--max-line-length", "80", "--ignore=E203,E266,E501,W503,E133"],
   "python.linting.pylintArgs": ["--disable", "C0330,W0212"],
   "python.linting.mypyEnabled": false,
   "python.linting.pylintEnabled": false

@@ -34,12 +34,8 @@ endfunction
 call SetupCommandAbbrs('C', 'CocConfig')
 
 " This section was copied from CoC
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+" trigger completion.
+inoremap <silent><expr> <a-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
@@ -198,3 +194,22 @@ let g:NERDTreeMinimalUI = 1
 " => Polyglot
 " disable polyglot for languages where we use other plugins
 let g:polyglot_disabled = ['python']
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => IndentLine
+let g:indentLine_setColors = 0
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indentLine_char = ''
+" let g:indentLine_first_char = ''
+" let g:indentLine_showFirstIndentLevel = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Rainbow Parenthesese
+augroup rainbow
+  autocmd!
+  autocmd FileType python,clojure,javascript RainbowParentheses
+augroup END
+let g:rainbow#max_level = 16
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'], ['<', '>']]
+

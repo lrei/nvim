@@ -2,7 +2,6 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General User Interface
-set colorcolumn=80      " colored column at x chars
 set number      	    " show line numbers
 set cursorline      	" Highlight cursor line
 set cmdheight=1         "  space for displaying messages.
@@ -13,7 +12,19 @@ set termguicolors
 syntax on
 set background=dark
 
-colorscheme gruvbox
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default.dark': {
+  \       'allow_bold': 1,
+  \       'allow_itaic': 1,
+  \       'override' : {
+  \         'color05' : ['#67d62f', ''],
+  \         'color07' : ['#f2f2f2', '']
+  \       }
+  \     }
+  \   }
+  \ }
+colorscheme PaperColor
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
@@ -22,12 +33,9 @@ set shortmess+=c
 " leads to noticeable delays and poor user experience.
 set updatetime=300
 
-" set fillchars+=stl:-    " fcs for focus window
-" set fillchars+=stlnc:+  " fcs for non focus
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => airline
-let g:airline_theme='gruvbox'
+let g:airline_theme='papercolor'
 " display buffers when only 1 tab
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
