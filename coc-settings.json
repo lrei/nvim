@@ -1,21 +1,105 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["markdown", "javascript", "json",
       "python"],
+  "coc.preferences.willSaveHandlerTimeout": 2000,
   "coc.preferences.formatOnType": true,
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "",
   "diagnostic.infoSign": "",
   "diagnostic.checkCurrentLine": true,
 
-  // python config
-  "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["--line-length", "80"],
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": ["--docstring-convention", "numpy",
-      "--max-line-length", "80", "--ignore=E203,E266,E501,W503,E133"],
-  "python.linting.pylintArgs": ["--disable", "C0330,W0212"],
-  "python.linting.mypyEnabled": false,
-  "python.linting.pylintEnabled": false
+  // yaml
+  "yaml.format.enable": true,
+
+  "jedi.enable": true,
+  "jedi.startupMessage": false,
+  "jedi.markupKindPreferred": "plaintext",
+  "jedi.trace.server": "off",
+  "jedi.jediSettings.autoImportModules": [],
+  "jedi.jediSettings.caseInsensitiveCompletion": true,
+  "jedi.jediSettings.debug": false,
+  "jedi.executable.command": "jedi-language-server",
+  "jedi.executable.args": [],
+  "jedi.codeAction.nameExtractFunction": "jls_extract_def",
+  "jedi.codeAction.nameExtractVariable": "jls_extract_var",
+  "jedi.completion.disableSnippets": false,
+  "jedi.completion.resolveEagerly": false,
+  "jedi.completion.ignorePatterns": [],
+  "jedi.diagnostics.enable": true,
+  "jedi.diagnostics.didOpen": true,
+  "jedi.diagnostics.didChange": true,
+  "jedi.diagnostics.didSave": true,
+  "jedi.hover.enable": true,
+  "jedi.hover.disable.keyword.all": false,
+  "jedi.hover.disable.keyword.names": [],
+  "jedi.hover.disable.keyword.fullNames": [],
+  "jedi.workspace.extraPaths": [],
+  "jedi.workspace.symbols.maxSymbols": 20,
+  "jedi.workspace.symbols.ignoreFolders": [
+    ".nox",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "venv"
+  ],
+  "diagnostic-languageserver.filetypes": {
+  "python": "pylint"
+},
+"diagnostic-languageserver.linters": {
+  "pylint": {
+    "sourceName": "pylint",
+    "command": "pylint",
+    "debounce": 100,
+    "args": [
+      "--output-format",
+      "text",
+      "--score",
+      "no",
+      "--msg-template",
+      "'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
+      "%file"
+    ],
+    "formatPattern": [
+      "^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
+      {
+        "line": 1,
+        "column": 2,
+        "endColumn": 2,
+        "security": 3,
+        "message": 4
+      }
+    ],
+    "rootPatterns": ["pyproject.toml", "setup.py", ".git"],
+    "securities": {
+      "informational": "hint",
+      "refactor": "info",
+      "convention": "info",
+      "warning": "warning",
+      "error": "error",
+      "fatal": "error"
+    },
+    "offsetColumn": 1,
+    "offsetColumnEnd": 1,
+    "formatLines": 1
+  }
+},
+
+"diagnostic-languageserver.formatFiletypes": {
+  "python": ["black", "isort", "docformatter"]
+},
+"diagnostic-languageserver.formatters": {
+  "black": {
+    "command": "black",
+    "args": ["-l 79", "-q", "-"]
+  },
+  "isort": {
+    "command": "isort",
+    "args": ["-q", "-"]
+  },
+  "docformatter": {
+    "command": "docformatter",
+    "args": ["-"]
+  }
+}
 
 }

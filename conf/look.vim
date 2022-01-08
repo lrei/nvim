@@ -10,8 +10,17 @@ set noshowmode          " mode is shown by lightline/airline/powerline/...
 
 set termguicolors
 syntax on
-set background=dark
 
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" I'm told, having longer updatetime (default is 4000 ms = 4 s)
+" leads to noticeable delays and poor user experience.
+set updatetime=300
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Theme
+" options that need to be set for different themes
 let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default.dark': {
@@ -24,18 +33,21 @@ let g:PaperColor_Theme_Options = {
   \     }
   \   }
   \ }
+let g:gruvbox_contrast_light = 'high'
+
+" theme selection
+set background=dark
 colorscheme PaperColor
+" colorscheme solarized8_high
+"autocmd vimenter * ++nested colorscheme solarized8
+" let g:airline_theme='solarized'
+let g:airline_theme='PaperColor'
+set background=dark
 
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
 
-" I'm told, having longer updatetime (default is 4000 ms = 4 s)
-" leads to noticeable delays and poor user experience.
-set updatetime=300
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => airline
-let g:airline_theme='papercolor'
+" => airline misc
 " display buffers when only 1 tab
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'

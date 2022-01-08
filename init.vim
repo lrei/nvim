@@ -6,3 +6,4 @@ source $HOME/.config/nvim/conf/edit.vim          " basic text editing settings
 source $HOME/.config/nvim/conf/nav.vim           " movement in file, windows, tabs, ...
 "source $HOME/.config/nvim/conf/lang/python.vim  " python
 source $HOME/.config/nvim/conf/lang/configf.vim  " config files
+source $HOME/.config/nvim/conf/lang/dataf.vim    " data files

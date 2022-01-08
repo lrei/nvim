@@ -5,6 +5,9 @@
 nnoremap j gj
 nnoremap k gk
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Windoes and Tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " - Move between windows
 "Key combos:
 " Ctrl-j move to the split below
@@ -22,25 +25,26 @@ noremap <leader>w <C-w>v<C-w>l
 set splitbelow
 set splitright
 
+" Choosewin
+nmap  -  <Plug>(choosewin)
+" choosewin overlay feature
+let g:choosewin_overlay_enable = 1
+
+
+" - Tab management
+nnoremap tl :tabnext<cr>
+nnoremap th :tabprev<cr>
+nnoremap tn :tabnew<CR>
+nnoremap tc :tabclose<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, Tabs, Windows
+" => Files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" - Tab management
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>t<leader> :tabnext<cr>
 
 " Return to last edit position when opening files
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
-
-" Choosewin
-nmap  -  <Plug>(choosewin)
-" choosewin overlay feature
-let g:choosewin_overlay_enable = 1
 

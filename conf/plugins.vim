@@ -13,12 +13,15 @@ Plug 'NLKNguyen/papercolor-theme'
 " railscasts theme
 Plug 'carakan/new-railscasts-theme'
 " Solarized
+" Plug 'altercation/vim-colors-solarized.git'
 Plug 'iCyMind/NeoSolarized'
+Plug 'lifepillar/vim-solarized8'
 " Night-Owl
 Plug 'haishanh/night-owl.vim'
 " Dracula
 Plug 'dracula/vim', { 'as': 'dracula' }
-" OneDark
+" One, OneDark, neodark
+Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
 Plug 'KeitaNakamura/neodark.vim'
 " xcode theme
@@ -37,6 +40,13 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'sjl/badwolf'
 " seoul256
 Plug 'junegunn/seoul256.vim'
+" vim-code-dark (vscode clone)
+Plug 'tomasiser/vim-code-dark'
+"Github style
+Plug 'endel/vim-github-colorscheme'
+" Two Firewatch
+Plug 'rakr/vim-two-firewatch'
+
 
 
 " Status line
@@ -61,11 +71,26 @@ Plug 'junegunn/fzf.vim'
 " highlights whatever was just yanked as a confirmation
 Plug 'machakann/vim-highlightedyank'
 
+" Fix the multiple clipboards mess, merging vim-tmux-os clipboards
+Plug 'jabirali/vim-tmux-yank'
+
 "Display a choose window menu
 Plug 't9md/vim-choosewin'
 
 " Display an Undo Tree
 Plug 'sjl/gundo.vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General Editor
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" allow . to repeat more stuff
+Plug 'tpope/vim-repeat'
+
+" vim-surround provides ways to handle parentheses, quotes etc
+Plug 'tpope/vim-surround'
+
+" Add indention (guide) lines
+Plug 'Yggdroot/indentLine'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -75,14 +100,11 @@ Plug 'sjl/gundo.vim'
 " Comment stuff out: gcc / gc[target]
 Plug 'tpope/vim-commentary'
 
-" vim-surround provides ways to handle parentheses, quotes etc
-Plug 'tpope/vim-surround'
+" git support
+Plug 'tpope/vim-fugitive'
 
 " Code Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" git support
-Plug 'tpope/vim-fugitive'
 
 " kind of repl (slime)
 Plug 'jpalardy/vim-slime'
@@ -91,10 +113,8 @@ Plug 'jpalardy/vim-slime'
 Plug 'majutsushi/tagbar'
 
 " Syntax support for multiple languages
+let g:polyglot_disabled = ['python']
 Plug 'sheerun/vim-polyglot'
-
-" Add indention (guide) lines
-Plug 'Yggdroot/indentLine'
 
 " Rainbow Parentheses
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -115,6 +135,9 @@ Plug 'tmhedberg/SimpylFold'
 " provides text objects and motions for Python classes, methods, functions, and doc strings
 " ac, ic, af, if, ad, id
 Plug 'jeetsukumaran/vim-pythonsense'
+
+" Black
+Plug 'psf/black', { 'branch': 'stable' }
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -140,7 +163,8 @@ Plug 'radenling/vim-dispatch-neovim'
 Plug 'kevinoid/vim-jsonc'
 
 " CSV
-Plug 'chrisbra/csv.vim'
+" Plug 'chrisbra/csv.vim'
+Plug 'mechatroner/rainbow_csv'
 
 
 " Initialize plugin system
