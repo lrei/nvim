@@ -1,15 +1,33 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["markdown", "javascript", "json",
-      "python"],
+
+  // autoformat
+  "coc.preferences.formatOnSaveFiletypes": [
+      "python",
+      "markdown",
+      "javascript",
+      "json",
+      "yaml"
+  ],
+
   "coc.preferences.willSaveHandlerTimeout": 2000,
   "coc.preferences.formatOnType": true,
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "",
   "diagnostic.infoSign": "",
   "diagnostic.checkCurrentLine": true,
-
-  // yaml
   "yaml.format.enable": true,
+
+  "pyright.enable": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider":  "black",
+  "python.formatting.blackArgs": ["--line-length", "79", "-q", "--fast"],
+  "python.linting.enabled": true,
+  "python.linting.pycodestyleEnabled": false,
+  "python.linting.pydocstyleEnabled": true,
+  "python.linting.pylintEnabled": true,
+  "pyright.organizeimports.provider": "isort",
+
 
   "jedi.enable": true,
   "jedi.startupMessage": false,
@@ -41,65 +59,6 @@
     ".venv",
     "__pycache__",
     "venv"
-  ],
-  "diagnostic-languageserver.filetypes": {
-  "python": "pylint"
-},
-"diagnostic-languageserver.linters": {
-  "pylint": {
-    "sourceName": "pylint",
-    "command": "pylint",
-    "debounce": 100,
-    "args": [
-      "--output-format",
-      "text",
-      "--score",
-      "no",
-      "--msg-template",
-      "'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
-      "%file"
-    ],
-    "formatPattern": [
-      "^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
-      {
-        "line": 1,
-        "column": 2,
-        "endColumn": 2,
-        "security": 3,
-        "message": 4
-      }
-    ],
-    "rootPatterns": ["pyproject.toml", "setup.py", ".git"],
-    "securities": {
-      "informational": "hint",
-      "refactor": "info",
-      "convention": "info",
-      "warning": "warning",
-      "error": "error",
-      "fatal": "error"
-    },
-    "offsetColumn": 1,
-    "offsetColumnEnd": 1,
-    "formatLines": 1
-  }
-},
-
-"diagnostic-languageserver.formatFiletypes": {
-  "python": ["black", "isort", "docformatter"]
-},
-"diagnostic-languageserver.formatters": {
-  "black": {
-    "command": "black",
-    "args": ["-l 79", "-q", "-"]
-  },
-  "isort": {
-    "command": "isort",
-    "args": ["-q", "-"]
-  },
-  "docformatter": {
-    "command": "docformatter",
-    "args": ["-"]
-  }
-}
+  ]
 
 }

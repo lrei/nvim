@@ -21,7 +21,14 @@ set updatetime=300
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 " options that need to be set for different themes
-let g:PaperColor_Theme_Options = {
+" PaperColor
+" set t_Co=256
+let g:PaperColor_Theme_Options={
+  \   'language': {
+  \     'python': {
+  \       'highlight_builtins' : 1
+  \     },
+  \   },
   \   'theme': {
   \     'default.dark': {
   \       'allow_bold': 1,
@@ -33,16 +40,25 @@ let g:PaperColor_Theme_Options = {
   \     }
   \   }
   \ }
-let g:gruvbox_contrast_light = 'high'
+" gruvbox
+let g:gruvbox_contrast_light='high'
+let g:gruvbox_contrast_dark='high'
+" gruvbox flat
+let g:gruvbox_flat_style="hard"
 
-" theme selection
+
+
+
 set background=dark
-colorscheme PaperColor
-" colorscheme solarized8_high
-"autocmd vimenter * ++nested colorscheme solarized8
-" let g:airline_theme='solarized'
-let g:airline_theme='PaperColor'
-set background=dark
+
+"Set GruvBox
+colorscheme gruvbox
+highlight Comment guifg=#ffb6c1
+highlight Normal guibg=#000000
+highlight CocUnusedHighlight guifg=#bdae93 guibg=#3c3836
+let g:airline_theme='gruvbox'
+
+" colorscheme PaperColor
 
 
 

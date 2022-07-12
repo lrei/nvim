@@ -5,12 +5,15 @@ call plug#begin('~/.local/share/nvim/plugged')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Themes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'vim-scripts/Zenburn'
 " gruvbox theme
 Plug 'morhetz/gruvbox'
+Plug 'eddyekofo94/gruvbox-flat.nvim'
 "PaperColor
 Plug 'NLKNguyen/papercolor-theme'
 
 " railscasts theme
+Plug 'jpo/vim-railscasts-theme'
 Plug 'carakan/new-railscasts-theme'
 " Solarized
 " Plug 'altercation/vim-colors-solarized.git'
@@ -20,33 +23,6 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'haishanh/night-owl.vim'
 " Dracula
 Plug 'dracula/vim', { 'as': 'dracula' }
-" One, OneDark, neodark
-Plug 'rakr/vim-one'
-Plug 'joshdick/onedark.vim'
-Plug 'KeitaNakamura/neodark.vim'
-" xcode theme
-Plug 'arzg/vim-colors-xcode'
-" monokai
-Plug 'crusoexia/vim-monokai'
-" ayu
-Plug 'ayu-theme/ayu-vim'
-" lucius
-Plug 'jonathanfilip/vim-lucius'
-" nightfly
-Plug 'bluz71/vim-nightfly-guicolors'
-" jellybeans
-Plug 'nanotech/jellybeans.vim'
-" badwolf
-Plug 'sjl/badwolf'
-" seoul256
-Plug 'junegunn/seoul256.vim'
-" vim-code-dark (vscode clone)
-Plug 'tomasiser/vim-code-dark'
-"Github style
-Plug 'endel/vim-github-colorscheme'
-" Two Firewatch
-Plug 'rakr/vim-two-firewatch'
-
 
 
 " Status line
@@ -119,13 +95,13 @@ Plug 'sheerun/vim-polyglot'
 " Rainbow Parentheses
 Plug 'junegunn/rainbow_parentheses.vim'
 
+" treesitter
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" python syntax highlighting
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-
 " python indention
 Plug 'Vimjas/vim-python-pep8-indent'
 
@@ -138,6 +114,9 @@ Plug 'jeetsukumaran/vim-pythonsense'
 
 " Black
 Plug 'psf/black', { 'branch': 'stable' }
+
+" Semshi syntax highlighting
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

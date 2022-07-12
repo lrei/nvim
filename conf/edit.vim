@@ -51,6 +51,8 @@ nnoremap <silent> zk O<Esc>j
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 
-
-
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Basic Text Search options
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" clear highlighted
+nnoremap <F3> :set hlsearch!<CR>
